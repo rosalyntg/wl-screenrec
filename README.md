@@ -15,7 +15,7 @@ Open an issue if something is not working, I'm happy to take a look.
   * [`wlr-screencopy-unstable-v1`](https://wayland.app/protocols/wlr-screencopy-unstable-v1) OR [`ext-image-copy-capture-v1`](https://wayland.app/protocols/ext-image-copy-capture-v1)
   * [`linux-dmabuf-v1`](https://wayland.app/protocols/linux-dmabuf-v1)
   * [`xdg-output-unstable-v1`](https://wayland.app/protocols/xdg-output-unstable-v1)
-    
+
     These compositors all meet this criteria:
     <!-- Generated using `./compatible-compositors.nu` -->
 
@@ -82,7 +82,7 @@ so I can update these docs on if it works or not)
 ```bash
 cargo install wl-screenrec # stable version
 # OR
-cargo install --git https://github.com/russelltg/wl-screenrec # git version
+cargo install --git https://github.com/rosalyntg/wl-screenrec # git version
 ```
 
 ## Fedora
@@ -95,8 +95,29 @@ Before you do that though, make sure you have the following dependencies install
 - `clang`
 - `ffmpeg-free-devel`
 
-Also, make sure you install full ffmpeg and codecs for hardware acceleration support 
+Also, make sure you install full ffmpeg and codecs for hardware acceleration support
 via [RPM Fusion](https://rpmfusion.org/Howto/Multimedia).
+
+## Debian
+
+For Debian stable/trixie or testing/forky (at the time of writing), these packages should be enough to build `rust-ffmpeg-sys`
+
+```
+apt install \
+    libavutil-dev \
+    libavformat-dev \
+    libavfilter-dev \
+    libavdevice-dev \
+    libdrm-dev \
+    clang
+```
+
+To install the ffmpeg codecs for hardware acceleration:
+```
+apt install \
+    intel-media-va-driver \
+    mesa-vulkan-drivers
+```
 
 ## FreeBSD
 
