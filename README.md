@@ -119,6 +119,8 @@ apt install \
     mesa-vulkan-drivers
 ```
 
+For additional codecs and to make `--codec avc` work, replace package `intel-media-va-driver` with `intel-media-va-driver-non-free`.
+
 ## FreeBSD
 
 ```bash
